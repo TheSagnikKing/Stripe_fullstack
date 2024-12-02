@@ -5,3 +5,6 @@ Important Points of this project Configuration
 If i donot do that then i have write the entire path . example "C:\Users\Sagnik\Downloads\stripe.exe" login. If i set stripe = "C:\Users\Sagnik\Downloads\stripe.exe" then i only have to write stripe.
 3. After that C:\Users\Sagnik\Downloads\stripe.exe listen --events payment_intent.created,customer.created,payment_intent.succeeded,checkout.session.completed,payment_intent.payment_failed --forward-to http://localhost:8001/api/webhook. Here the port is forward to my backend server that is running and always set those all events.
 4. To configure the hosted website webhook for stripe https://dashboard.stripe.com/test/workbench/webhooks 
+
+5. With the checkout endpoint i am creating a new session everytime for the customer and the session get expired after payment completion.
+6. /api/webhook this api is called by stripe after i give my card details, email, name etc and hit payment this api will call and if success will save the customer_details with the product details and save it to the database
