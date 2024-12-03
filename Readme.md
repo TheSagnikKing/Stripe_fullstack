@@ -10,7 +10,7 @@ If i donot do that then i have write the entire path . example "C:\Users\Sagnik\
 6. /api/webhook this api is called by stripe after i give my card details, email, name etc and hit payment this api will call and if success will save the customer_details with the product details and save it to the database
 
 
-7. If my server got crash or off during this api is calling then see the below point.
+7. If my server got crash or off during this /api/webhook is calling then see the below point.
 
 Enable Retry Mechanism on Stripe Webhooks
 
