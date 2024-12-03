@@ -24,3 +24,5 @@ If something goes wrong (e.g., the database save fails), return a non-2xx status
 
 ************* Retry behavior
 In live mode, Stripe attempts to deliver a given event to your webhook endpoint for up to 3 days with an exponential back off. In test mode, Stripe retries three times over a few hours. You can view when the next retry will occur in the Events section of the Dashboard.
+
+8. For subscription logic you can use Start Date and End Date and subscriptionStatus in database instead of using stripe subscription base api. 
